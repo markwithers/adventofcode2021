@@ -6,7 +6,7 @@ import {product} from 'fp-ts-std/Array';
 import fs from 'fs';
 
 pipe(
-  fs.readFileSync('./2.txt', 'utf-8'),
+  fs.readFileSync('./data/2.txt', 'utf-8'),
   lines,
   RA.map(instruction => instruction.split(' ') as [string, string]),
   RA.map(T.mapSnd(distance => parseInt(distance, 10))),
@@ -27,7 +27,7 @@ pipe(
 );
 
 pipe(
-  fs.readFileSync('./2.txt', 'utf-8'),
+  fs.readFileSync('./data/2.txt', 'utf-8'),
   lines,
   RA.map(instruction => instruction.split(' ') as [string, string]),
   RA.map(T.mapSnd(distance => parseInt(distance, 10))),

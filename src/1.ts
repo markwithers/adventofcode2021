@@ -6,7 +6,7 @@ import {pipe} from 'fp-ts/lib/function';
 import fs from 'fs';
 
 pipe(
-  fs.readFileSync('./1.txt', 'utf-8'),
+  fs.readFileSync('./data/1.txt', 'utf-8'),
   lines,
   RA.map(string => parseInt(string, 10)),
   RA.reduce<number, [number, number]>([0, Infinity], ([inc, last], num) =>
@@ -17,7 +17,7 @@ pipe(
 );
 
 pipe(
-  fs.readFileSync('./1.txt', 'utf-8'),
+  fs.readFileSync('./data/1.txt', 'utf-8'),
   lines,
   RA.map(string => parseInt(string, 10)),
   numbers =>
