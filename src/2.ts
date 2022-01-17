@@ -34,7 +34,6 @@ pipe(
   RA.reduce([0, 0, 0], ([x, y, aim], [direction, distance]) => {
     switch (direction) {
       case 'down':
-        product([1, 2])
         return [x, y, aim + distance]
       case 'up':
         return [x, y, aim - distance]
